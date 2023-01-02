@@ -15,17 +15,19 @@ class Square:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
+
     @property
     def size(self):
         return(self._Square__size)
+
     @size.setter
     def size(self, value):
         self._Square__size = value
-        if isinstance(value, int) == False:
+        if isinstance(value, int) is False:
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
-            
+
     def area(self):
         """ A public instance method that calculates the area of a square
         """
