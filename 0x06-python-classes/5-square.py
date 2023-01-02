@@ -35,6 +35,7 @@ class Square:
             for j in range(self._Square__size):
                 print("#", end="")
             print()
+
     def area(self):
         """ A public instance method that calculates the area of a square
         """
