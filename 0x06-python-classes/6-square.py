@@ -55,7 +55,7 @@ class Square:
         if self._Square__size == 0:
             print()
 
-        if self._Square__position[1] != 0:
+        if self._Square__position[1] != 0 and self._Square__size != 0:
             print("\n" * self._Square__position[1], end="")
 
         for i in range(self._Square__size):
