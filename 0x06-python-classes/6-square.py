@@ -56,7 +56,7 @@ class Square:
             print()
 
         if self._Square__position[1] != 0:
-            print("" * self._Square__position[1])
+            print("\n" * self._Square__position[1], end="")
 
         for i in range(self._Square__size):
             print(" " * self._Square__position[0], end="")
