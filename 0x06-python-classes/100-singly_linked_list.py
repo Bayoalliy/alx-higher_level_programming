@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+""" In this module, two classes are created
+to define a node and a singly linked list respectively
+"""
+
 
 class Node:
     """ A class representing a Node in C"""
