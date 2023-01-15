@@ -14,6 +14,8 @@ class Node:
         if not isinstance(data, int):
             raise TypeError("data must be an integer")
         self._next_node = next_node
+        if next_node is not None and isinstance(next_node, Node) is False:
+            raise TypeError("next_node must be a Node object")
         Node.node_count += 1
 
     @property
