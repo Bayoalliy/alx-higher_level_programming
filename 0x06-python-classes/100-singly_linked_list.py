@@ -50,6 +50,8 @@ class SinglyLinkedList:
         return lst
 
     def sorted_insert(self, value):
+        if type(value) is not int:
+            raise TypeError("data must be an integer")
         if Node.node_count == 0:
             self._head = Node(value)
             Node.tail = self._head
