@@ -5,6 +5,7 @@
 This is a class that prevents user from
 dynamically creating new instances attributes.
 
+
 """
 
 
