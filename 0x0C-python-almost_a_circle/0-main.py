@@ -18,3 +18,7 @@ if __name__ == "__main__":
 
     b5 = Base()
     print(b5.id)
+
+    a = None
+    b6 = Base(a)
+    print(b6.id)
