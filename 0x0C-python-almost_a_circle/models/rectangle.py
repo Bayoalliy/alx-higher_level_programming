@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-from models.base import Base
 
 """
 This module contains a Rectangle class that is a child of Base.
 
 """
+from models.base import Base
 
 
 class Rectangle(Base):
