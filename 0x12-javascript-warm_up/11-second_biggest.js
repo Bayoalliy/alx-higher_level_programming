@@ -13,6 +13,8 @@ if (args.length === 3) {
   newArgs.sort((a, b) => b - a);
   if (newArgs[0] !== newArgs[1]) {
     console.log(newArgs[1]);
+  } else if (newArgs[0] === newArgs[newArgs.length - 1]) {
+    console.log(newArgs[0]);
   } else {
     for (const j of newArgs) {
       if (j < newArgs[0]) {
