@@ -11,7 +11,16 @@ if (args.length === 3) {
     newArgs.push(parseInt(args[i]));
   }
   newArgs.sort((a, b) => b - a);
-  console.log(newArgs[1]);
+  if (newArgs[0] !== newArgs[1]) {
+    console.log(newArgs[1]);
+  } else {
+    for (const j of newArgs) {
+      if (j < newArgs[0]) {
+        console.log(j);
+        break;
+      }
+    }
+  }
 } else {
   console.log(0);
 }
