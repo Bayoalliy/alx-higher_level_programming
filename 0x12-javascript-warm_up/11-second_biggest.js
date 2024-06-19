@@ -10,7 +10,6 @@ if (args.length === 3) {
   for (let i = 2; i < args.length; i++) {
     newArgs.push(parseInt(args[i]));
   }
-  console.log(newArgs);
   newArgs.sort((a, b) => b - a);
   console.log(newArgs[1]);
 } else {
