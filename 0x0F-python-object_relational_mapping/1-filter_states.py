@@ -13,8 +13,8 @@ if __name__ == '__main__':
                          passwd=args[2], database=args[3])
 
     cur = db.cursor()
-    cur.execute(f"SELECT * FROM states WHERE LEFT(name, 1) = 'N'")
+    cur.execute("SELECT * FROM states WHERE LEFT(name, 1) = 'N';")
     states = cur.fetchall()
 
-    for i in states:
-        print(i)
+    for state in states:
+        print(state)
