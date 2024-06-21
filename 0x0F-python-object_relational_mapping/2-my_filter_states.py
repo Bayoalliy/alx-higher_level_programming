@@ -13,8 +13,8 @@ if __name__ == '__main__':
                          passwd=args[2], db=args[3])
 
     cur = db.cursor()
-    query = "SELECT * FROM states WHERE name = %s"
-    cur.execute(query, (args[4],))
+    query = "SELECT * FROM states WHERE name = '{}'".format(args[4])
+    cur.execute(query)
     states = cur.fetchall()
 
     for state in states:
