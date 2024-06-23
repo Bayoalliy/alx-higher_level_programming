@@ -18,4 +18,7 @@ if __name__ == '__main__':
 
     states = session.query(State).first()
 
-    print("{}: {}".format(states.id, states.name))
+    if (states):
+        print("{}: {}".format(states.id, states.name), end="")
+
+    print("")
