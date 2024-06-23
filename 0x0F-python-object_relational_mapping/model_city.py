@@ -8,7 +8,6 @@ from sqlalchemy.ext.declarative import declarative_base
 from model_state import Base
 
 
-
 class City(Base):
     """State class inheriting from Base"""
     __tablename__ = "cities"
