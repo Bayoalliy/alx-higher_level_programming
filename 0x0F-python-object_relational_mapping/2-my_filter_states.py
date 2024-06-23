@@ -14,8 +14,7 @@ if __name__ == '__main__':
 
     cur = db.cursor()
     query = "SELECT * FROM states WHERE \
-    CONVERT (`name` using latin1) \
-    COLLATE Latin1_General_CS = '{}'".format(args[4])
+    name LIKE BINARY '{}'".format(args[4])
     cur.execute(query)
     states = cur.fetchall()
 
