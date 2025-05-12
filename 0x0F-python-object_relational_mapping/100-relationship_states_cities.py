@@ -4,9 +4,11 @@ adds the State object “Louisiana” to the database hbtn_0e_6_usa
 """
 
 import sys
-from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import (create_engine)
+from model_state import Base
+from relationship_state import State
+from relationship_city import City
 
 
 if __name__ == '__main__':
@@ -15,10 +17,12 @@ if __name__ == '__main__':
                 sys.argv[1], sys.argv[2], sys.argv[3]
                 ), pool_pre_ping=True)
 
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    new_state = State(name='Lousiana')
-    session.add(new_state)
+    new_state = State(name='California')
+    new_city = City(name='San Francisco')
+    new_state.cities.append(new_city)
+    session.add_all([new_state, new_city])
     session.commit()
-    print(new_state.id)
