@@ -5,7 +5,8 @@ contains the class definition of a City.
 """
 from sqlalchemy import Column, Integer, String, MetaData, ForeignKey
 from sqlalchemy.orm import declarative_base, relationship
-from relationship_state import Base 
+from relationship_state import Base
+
 
 class City(Base):
     """State class inheriting from Base"""
