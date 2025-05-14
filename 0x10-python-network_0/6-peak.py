@@ -15,8 +15,6 @@ Note: there may be more than one peak in the list
 def find_peak(list_of_integers):
     """finds the peak of a list"""
     size = len(list_of_integers)
-    if len(list_of_integers) < 3:
-        return None
     for i in range(size):
         left = right = True
         if i != 0 and list_of_integers[i] < list_of_integers[i - 1]:
@@ -25,3 +23,4 @@ def find_peak(list_of_integers):
             right = False
         if right and left:
             return list_of_integers[i]
+    return None
