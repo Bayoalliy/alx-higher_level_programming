@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
 Write a function that finds a peak in a list of unsorted integers.
-
 Prototype: def find_peak(list_of_integers):
 You are not allowed to import any module
 Your algorithm must have the lowest complexity
@@ -11,7 +10,6 @@ Your algorithm must have the lowest complexity
 O(log(n)), O(n), O(nlog(n)) or O(n2)
 Note: there may be more than one peak in the list
 """
-
 
 def find_peak(list_of_integers):
     """finds the peak of a list"""
