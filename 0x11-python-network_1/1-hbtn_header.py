@@ -13,7 +13,8 @@ You must use a with statement
 import urllib.request
 import sys
 
-url = sys.argv[1]
-with urllib.request.urlopen(url) as res:
-    res_header = res.headers
-    print(res_header.get("X-Request-Id"))
+if __name__ == '__main__':
+    url = sys.argv[1]
+    with urllib.request.urlopen(url) as res:
+        res_header = res.headers
+        print(res_header.get("X-Request-Id"))
