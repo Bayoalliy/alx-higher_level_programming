@@ -10,7 +10,7 @@ You are not allowed to import packages other than urllib and sys
 You don’t need to check arguments passed to the script (number or type)
 You must use the with statement
 """
-from urllib import request, parse
+from urllib import request
 import sys
 
 if __name__ == '__main__':
