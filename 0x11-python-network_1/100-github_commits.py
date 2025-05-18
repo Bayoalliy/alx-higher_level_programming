@@ -16,10 +16,10 @@ if __name__ == '__main__':
     repo = sys.argv[1]
     name = sys.argv[2]
     url = f"https://api.github.com/repos/{name}/{repo}/commits"
-    data = {"owner": name, "repo": repo}
-    res = requests.get(url, headers=data)
+    data = {"owner": name, "repo": repo, "per_page": 10}
+    res = requests.get(url, params=data)
     res = res.json()
-    for i in range(10):
-        author_name = res[i].get('commit').get('author').get('name')
-        print(res[i].get('sha'), end=": ")
+    for commit in res:
+        author_name = commit.get('commit').get('author').get('name')
+        print(commit.get('sha'), end=": ")
         print(author_name)
