@@ -23,10 +23,11 @@ if __name__ == '__main__':
     res = requests.post(url, data=data)
     try:
         res = res.json()
-    except:
-        print("Not a valid JSON")
 
     if res:
         print(f"[{res.get('id')}] {res.get('name')}")
     else:
         print("No result")
+
+    except:
+        print("Not a valid JSON")
