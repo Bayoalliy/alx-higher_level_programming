@@ -10,6 +10,10 @@ request(endpoint, { json: true }, (err, res, body) => {
   }
   for (const character of body.characters) {
     request(character, { json: true }, (err, res, body) => {
+      if (err) {
+        console.log(err);
+        return;
+      }
       console.log(body.name);
     });
   }
