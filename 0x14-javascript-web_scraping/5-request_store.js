@@ -12,5 +12,5 @@ request(process.argv[2], (err, res, body) => {
     if (error) {
       console.log(error);
     }
-  })
+  });
 });
